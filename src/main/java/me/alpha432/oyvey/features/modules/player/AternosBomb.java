@@ -1,18 +1,14 @@
 package me.alpha432.oyvey.features.modules.player;
 
-import me.alpha432.oyvey.features.modules.Module;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.InteractionResult;
+import net.minecraft.util.ActionResult;           // war früher ActionResultType / InteractionResult
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.item.Items;
-import net.minecraft.client.world.ClientWorld; // Falls mc.world benötigt
-
-import net.minecraft.util.Category; // Falls nicht schon importiert
-
+import net.minecraft.client.network.ClientPlayerInteractionManager; // falls du mc.interactionManager casten musst
+// net.minecraft.client.world.ClientWorld → meist nicht nötig, mc.world ist ClientWorld
+// Category → das ist aus deinem Client-Framework (oyvey), nicht Minecraft → lass weg oder importiere aus deinem Code
 public class AternosBomb extends Module {
     private int placed = 0;
 
