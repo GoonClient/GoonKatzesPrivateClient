@@ -18,11 +18,6 @@ public class WatermarkHudModule extends HudModule {
             register(fullVersion);
         }
         
-        // Optional: wenn du willst, dass der Watermark standardmäßig AN ist (meist eh default)
-         this.setEnabled(true);   // ← das ist normalerweise schon so
-        
-        // Wenn du ihn standardmäßig AUS haben willst, nimm stattdessen:
-        // this.setEnabled(false);
     }
 
     @Override
